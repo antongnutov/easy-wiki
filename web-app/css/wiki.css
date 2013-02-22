@@ -1,0 +1,127 @@
+table {
+    border-collapse:collapse;
+    width: auto;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+a:link, a:visited, a:hover {
+    color: #1122D0;
+    font-weight: normal;
+    text-decoration: none;
+}
+a:visited {
+    color: #6611D0;
+}
+a:hover {
+    text-decoration: underline;
+}
+.homePagePanel * {
+    margin:0px;
+}
+.homePagePanel .panelBody ul {
+    list-style-type:none;
+    margin-bottom:10px;
+}
+.homePagePanel .panelBody h1 {
+    text-transform:uppercase;
+    font-size:1.1em;
+    margin-bottom:10px;
+}
+.homePagePanel .panelBody {
+    margin:0px;
+    padding:10px;
+    border: 1px dashed #CCC;
+}
+.homePagePanel .panelBtm {}
+.homePagePanel .panelTop {}
+h2 {
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size:1.2em;
+}
+h3 {
+    color: #54BCF2;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size:1.1 em;
+}
+#pageBody {
+    margin-left:10px;
+    margin-right:10px;
+}
+#wikipanel {
+    margin-top:5px;
+    margin-left:20px;
+    width:228px;
+    float:left;
+
+}
+#wikiBody {
+    margin: 10px 0 10px 0;
+    border: 1px dashed #CCC;
+    padding: 4px;
+}
+#wikiBottom {
+    margin: 10px 0;
+    border: 1px dotted #CCC;
+}
+#wikiAttachments, #wikiChildren {
+    padding: 4px;
+}
+#breadcrumb {
+    margin: 10px 0;
+    border: 1px dotted #CCC;
+    padding: 3px 5px;
+}
+.menuButton a.wiki {
+    background: url(../images/skin/wiki.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.pages {
+    background: url(../images/skin/pages.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.pageAdd {
+    background: url(../images/skin/page_add.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.pageEdit {
+    background: url(../images/skin/page_edit.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.pageDelete {
+    background: url(../images/skin/page_delete.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.pageSearch {
+    background: url(../images/skin/page_search.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.menuButton a.attach {
+    background: url(../images/skin/attachment.png) center left no-repeat;
+    color: #333;
+    padding-left: 25px;
+}
+.buttons input.attach {
+    background: transparent url(../images/skin/attachment.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.pageEdit {
+    background: transparent url(../images/skin/page_edit.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.pageDelete {
+    background: transparent url(../images/skin/page_delete.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
+.buttons input.pageAccept {
+    background: transparent url(../images/skin/page_accept.png) 5px 50% no-repeat;
+    padding-left: 28px;
+}
