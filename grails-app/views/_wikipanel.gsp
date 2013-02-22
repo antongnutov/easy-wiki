@@ -7,6 +7,8 @@
             <ul>
               <li><g:link controller="console">Groovy console</g:link></li>
               <li><g:link controller="dbconsole">DB console</g:link></li>
+              <li><g:link controller="user">Users</g:link></li>
+              <li><g:link controller="userRole">User roles</g:link></li>
             </ul>
           </sec:ifAllGranted>
           
