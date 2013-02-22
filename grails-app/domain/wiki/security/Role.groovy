@@ -12,4 +12,9 @@ class Role {
 	static constraints = {
 		authority blank: false, unique: true
 	}
+
+    @Override
+    String toString() {
+        authority
+    }
 }
