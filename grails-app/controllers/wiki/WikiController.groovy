@@ -1,7 +1,9 @@
 package wiki
 
 class WikiController {
-    
+
+    static defaultAction = "wiki"
+
     def wiki = {
         def pageName = params.id
 
