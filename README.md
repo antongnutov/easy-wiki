@@ -1,4 +1,4 @@
 easy-wiki
 =========
 
-Easy wiki application on Grails
+Sandbox Grails application
