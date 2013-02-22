@@ -55,6 +55,8 @@ grails.exceptionresolver.params.exclude = ['password']
 environments {
     production {
         grails.serverURL = "http://${appName}.cloudfoundry.com"
+        grails.dbconsole.enabled = true
+        grails.dbconsole.urlRoot = '/dbconsole'
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
