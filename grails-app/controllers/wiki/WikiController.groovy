@@ -5,7 +5,7 @@ class WikiController {
     static defaultAction = "wiki"
 
     def wiki = {
-        def pageName = params.id
+        def pageName = params.id?.decodeURL()
 
         def page = pageName ? WikiPage.findByName(pageName) : null
         def breadcrumb = page ? breadcrumb(page) : ''

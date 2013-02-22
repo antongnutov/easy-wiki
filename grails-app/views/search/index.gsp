@@ -92,15 +92,18 @@
                     <g:each var="result" in="${searchResult.results}" status="index">
                     <li>
                       <div class="result">
-                        <g:set var="className" value="${ClassUtils.getShortName(result.getClass())}" />
-                        <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}" />
+                          <g:if test="${result.getClass() == wiki.WikiPage.class}">
+                              <g:set var="link" value="${createLink(controller: 'wiki', id: result.name)}" />
+                          </g:if>
+                          <g:else>
+                              <g:set var="className" value="${ClassUtils.getShortName(result.getClass())}" />
+                              <g:set var="link" value="${createLink(controller: className[0].toLowerCase() + className[1..-1], action: 'show', id: result.id)}" />
+                          </g:else>
+
                         <g:set var="desc" value="${result.toString()}" />
                         <g:if test="${desc.size() > 120}"><g:set var="desc" value="${desc[0..120] + '...'}" /></g:if>
     
                         <div class="name"><a href="${link}">${desc.encodeAsHTML()}</a></div>
-    <%--                    <div class="name"><a href="${link}">${className} #${result.id}</a></div>--%>
-    <%--                    <div class="desc">${desc.encodeAsHTML()}</div>--%>
-    <%--                    <div class="displayLink">${link}</div>--%>
                       </div>
                       </li>
                     </g:each>

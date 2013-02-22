@@ -12,10 +12,9 @@ class SearchController {
         }
     
         try {
-            def result = [searchResult: searchableService.search(params.q, params)]
-            return result
-        } catch (SearchEngineQueryParseException ex) {
-            return [parseException: true]
+            [searchResult: searchableService.search(params.q, params)]
+        } catch (SearchEngineQueryParseException ignored) {
+            [parseException: true]
         }
     }
 }

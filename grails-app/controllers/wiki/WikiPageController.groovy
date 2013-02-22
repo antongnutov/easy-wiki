@@ -6,7 +6,7 @@ class WikiPageController {
     
     def show = {
         def page = WikiPage.get(params.id)
-        redirect(controller: 'wiki', action: 'wiki', params: [id: page?.name])
+        redirect(controller: 'wiki', action: 'wiki', params: [id: page?.name?.encodeAsURL()])
     }
     
     def attach = {
