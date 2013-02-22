@@ -122,8 +122,7 @@ grails.plugins.springsecurity.password.algorithm='SHA-512'
 grails.plugins.springsecurity.securityConfigType = "InterceptUrlMap"
 grails.plugins.springsecurity.interceptUrlMap = [
     // wiki
-    //'/wiki/**':      ['ROLE_WIKI', 'ROLE_WIKI_ADMIN', 'IS_AUTHENTICATED_REMEMBERED'],
-    '/wiki/**':      ['IS_AUTHENTICATED_ANONYMOUSLY'],
+    '/wiki/**':      ['ROLE_WIKI', 'ROLE_WIKI_ADMIN', 'IS_AUTHENTICATED_REMEMBERED'],
     '/search/**':    ['ROLE_WIKI', 'ROLE_WIKI_ADMIN', 'IS_AUTHENTICATED_REMEMBERED'],
     '/attachment/**':['ROLE_WIKI', 'ROLE_WIKI_ADMIN', 'IS_AUTHENTICATED_REMEMBERED'],
     'wikiPage/show/**':   ['ROLE_WIKI', 'ROLE_WIKI_ADMIN', 'IS_AUTHENTICATED_REMEMBERED'],
