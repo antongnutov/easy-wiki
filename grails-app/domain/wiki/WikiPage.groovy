@@ -2,8 +2,13 @@ package wiki
 
 class WikiPage {
 
-	static searchable = true
-	
+	static searchable = {
+        only = ['name', 'content']
+        mapping {
+            spellCheck "include"
+        }
+    }
+
     static constraints = {
         name(blank: false, maxSize: 100, unique: true)
         content(maxSize: 10000)
