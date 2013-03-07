@@ -3,7 +3,7 @@ package wiki
 class WikiPageController {
 
     def scaffold = WikiPage
-    
+
     def show = {
         def page = WikiPage.get(params.id)
         redirect(controller: 'wiki', action: 'wiki', params: [id: page?.name?.encodeAsURL()])
@@ -19,7 +19,7 @@ class WikiPageController {
             return [page: page]
         }
     }
-    
+
     def uploadAttachment = {
         def page = WikiPage.get(params.id)
         

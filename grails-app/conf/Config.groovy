@@ -116,6 +116,10 @@ log4j = {
 	}
 }
 
+// twitter-bootstrap plugin
+grails.plugins.twitterbootstrap.fixtaglib = true
+grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'
+
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'wiki.security.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'wiki.security.UserRole'

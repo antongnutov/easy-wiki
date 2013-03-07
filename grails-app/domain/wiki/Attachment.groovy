@@ -4,7 +4,7 @@ class Attachment {
 
     static constraints = {
         name(blank: false, maxSize: 200, unique: 'wikiPage')
-        content(nullable: true, maxSize: 1024000)
+        content(nullable: true, maxSize: 10024000)
         wikiPage(nullable: false)
         contentType(nullable: true)
     }
@@ -18,7 +18,7 @@ class Attachment {
     String name
     byte[] content
     String contentType
-    
+
     String toString() {
         name
     }

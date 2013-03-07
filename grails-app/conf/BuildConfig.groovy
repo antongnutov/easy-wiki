@@ -34,6 +34,12 @@ grails.project.dependency.resolution = {
         compile ":wikitext:0.1.2"
         compile ":searchable:0.6.4"
 
+        compile ":resources:1.2.RC2"
+        compile ":twitter-bootstrap:2.3.0"
+        compile(":bootstrap-file-upload:2.1.1") {
+            excludes 'jquery'
+        }
+
         runtime ":jquery:1.8.3"
         runtime ":console:1.2"
         runtime ":hibernate:$grailsVersion"
