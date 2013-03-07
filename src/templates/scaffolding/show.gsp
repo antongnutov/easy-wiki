@@ -39,7 +39,7 @@
                 <dd valign="top" class="value">\${fieldValue(bean: ${propertyName}, field: "${p.name}")}</dd>
                 <%  } %>
             <%  } %>
-        </div>
+        </dl>
 
         <sec:ifAllGranted roles="ROLE_ADMIN">
             <div class="buttons controls">
