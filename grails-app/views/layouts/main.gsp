@@ -9,31 +9,14 @@
     <title><g:layoutTitle default="Wiki"/></title>
     <link rel="stylesheet" href="${resource(dir:'css',file:'wiki.css')}" />
     <link rel="shortcut icon" href="${resource(dir: 'images/skin', file: 'wiki.png')}"/>
+    <r:require modules="bootstrap"/>
     <g:layoutHead/>
 
     <style type="text/css">
-    body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-    }
-
-    .sidebar-nav {
-        padding: 9px 0;
-    }
-
-    @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
-            float: none;
-            padding-left: 5px;
-            padding-right: 5px;
-        }
-    }
+        body {padding-top: 60px;}
     </style>
 
     <g:javascript library="jquery" plugin="jquery"/>
-    <r:require modules="application"/>
-    <r:require modules="bootstrap-full"/>
     <r:layoutResources/>
 </head>
 
@@ -70,9 +53,6 @@
     <g:render template="/footer"/>
 </div>
 
-%{--<div id="footer">
-    <g:render template="/footer"/>
-</div>--}%
 <r:layoutResources/>
 </body>
 </html>
