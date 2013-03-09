@@ -11,7 +11,7 @@
     <body>
         <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
         <g:hasErrors bean="${wikiPageInstance}">
-        <div class="errors">
+        <div class="alert alert-error">
             <g:renderErrors bean="${wikiPageInstance}" as="list" />
         </div>
         </g:hasErrors>
@@ -23,11 +23,12 @@
 
             <div class="control-group">
                 <div class="buttons">
-                    <button class="btn btn-small btn-success" type="submit"><i class="icon-ok"></i> <g:message code="default.button.update.label" default="Update"/></button>
+                    <button class="btn btn-small btn-success" type="submit"><i class="icon-ok icon-white"></i> <g:message code="default.button.update.label" default="Update"/></button>
                     <g:link class="btn btn-small btn-danger" controller="wikiPage" action="delete" params="${[id: wikiPageInstance.id]}"
                             onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-                        <i class="icon-remove"></i> <g:message code="default.button.delete.label" default="Delete"/>
+                        <i class="icon-remove icon-white"></i> <g:message code="default.button.delete.label" default="Delete"/>
                     </g:link>
+                    <button class="btn btn-small btn-inverse" type="reset"><i class="icon-refresh icon-white"></i> Reset</button>
                 </div>
             </div>
         </g:form>

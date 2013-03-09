@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html>
+<%@ page import="org.codehaus.groovy.grails.web.servlet.GrailsApplicationAttributes" %>
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,6 @@
         body {padding-top: 60px;}
     </style>
 
-    <g:javascript library="jquery" plugin="jquery"/>
     <r:layoutResources/>
 </head>
 
@@ -31,15 +31,7 @@
 <div id="Content" class="container-fluid">
 
     <div class="row-fluid">
-        <div class="span3">
-            <g:render template="/wikipanel"/>
-        </div>
-
-        <div class="span9">
-            <g:render template="/flash"/>
-
-            <g:layoutBody/>
-        </div>
+        <g:layoutBody/>
     </div>
 
     <hr>

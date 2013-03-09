@@ -42,7 +42,7 @@
                 <g:link class="btn btn-small" controller="wikiPage" action="attach" params="${[id: page.id]}"><i class="icon-upload"></i> <g:message code="default.button.attach.label" default="Attach"/></g:link>
                 <g:link class="btn btn-small btn-danger" controller="wikiPage" action="delete" params="${[id: page.id]}"
                         onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');">
-                    <i class="icon-remove"></i> <g:message code="default.button.delete.label" default="Delete"/>
+                    <i class="icon-remove icon-white"></i> <g:message code="default.button.delete.label" default="Delete"/>
                 </g:link>
             </div>
         </sec:ifAllGranted>

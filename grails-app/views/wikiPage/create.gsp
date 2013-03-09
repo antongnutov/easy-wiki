@@ -11,7 +11,7 @@
         <h1><g:message code="default.create.label" args="[entityName]" /></h1>
 
         <g:hasErrors bean="${wikiPageInstance}">
-        <div class="errors">
+        <div class="alert alert-error">
             <g:renderErrors bean="${wikiPageInstance}" as="list" />
         </div>
         </g:hasErrors>
@@ -20,7 +20,7 @@
 
             <div class="control-group">
                 <div class="buttons">
-                    <button class="btn btn-small btn-success" type="submit"><i class="icon-ok"></i> <g:message code="default.button.create.label" default="Create"/></button>
+                    <button class="btn btn-small btn-success" type="submit"><i class="icon-ok icon-white"></i> <g:message code="default.button.create.label" default="Create"/></button>
                 </div>
             </div>
         </g:form>

@@ -8,6 +8,7 @@
     <div class="value ${hasErrors(bean: wikiPageInstance, field: 'name', 'errors')}">
         <g:textField class="tooltipable" name="name" maxlength="100" value="${wikiPageInstance?.name}" placeholder="${message(code: 'wikiPage.name.placeholder', default: 'Name')}"
                      title="${message(code: 'wikiPage.name.tooltip', default: 'Page name')}"/>
+        <span class="help-inline">${hasErrors(bean: wikiPageInstance, field: 'name', 'error')}</span>
     </div>
 </div>
 

@@ -6,16 +6,14 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="layout" content="main" />
     <title><g:if test="${params.q && params.q?.trim() != ''}">${params.q} - </g:if>Wiki Search</title>
-
-    <script type="text/javascript">
-        var focusQueryInput = function() {
-            document.getElementById("q").focus();
-        }
-    </script>
   </head>
   
-  <body onload="focusQueryInput();">
-
+  <body>
+      <script type="text/javascript">
+          $(document).ready(function() {
+              $('#q').focus();
+          });
+      </script>
       <div>
         <h3>Search in Wiki</h3>
         <g:form controller="search" id="searchableForm" name="searchableForm" method="get">
