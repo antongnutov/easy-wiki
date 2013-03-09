@@ -5,10 +5,10 @@
         <link rel="stylesheet" href="${resource(dir:'css',file:'main.css')}" />
         <link rel="stylesheet" href="${resource(dir:'css',file:'wiki.css')}" />
         <link rel="shortcut icon" href="${resource(dir:'images/skin',file:'wiki.png')}"/>
-        
+
         <g:layoutHead />
     </head>
-    <body>
+    <body onload="${pageProperty(name:'body.onload')}">
         <div id="wrap">
             <div id="spinner" class="spinner" style="display:none;">
                 <img src="${resource(dir:'images',file:'spinner.gif')}" alt="${message(code:'spinner.alt',default:'Loading...')}" />
