@@ -53,17 +53,17 @@ class BootStrap {
                 servicesMap.each { key, services ->
                     if (key.startsWith('mysql')) {
                         for (service in services) {
-                            print "MySQL service $service.name: "
-                            print "url='jdbc:mysql://$service.credentials.hostname:$service.credentials.port/$service.credentials.name', "
-                            print "user='$service.credentials.user', "
-                            println "password='$service.credentials.password'n"
+                            println "MySQL service $service.name:"
+                            println "url = 'jdbc:mysql://$service.credentials.hostname:$service.credentials.port/$service.credentials.name',"
+                            println "user = '$service.credentials.user',"
+                            println "password = '$service.credentials.password'"
                         }
                     } else if (key.startsWith('postgresql')) {
                         for (service in services) {
-                            print "PostgreSQL service $service.name: "
-                            print "url='jdbc:postgresql://$service.credentials.hostname:$service.credentials.port/$service.credentials.name', "
-                            print "user='$service.credentials.user', "
-                            println "password='$service.credentials.password'n"
+                            println "PostgreSQL service $service.name:"
+                            println "url = 'jdbc:postgresql://$service.credentials.hostname:$service.credentials.port/$service.credentials.name',"
+                            println "user = '$service.credentials.user',"
+                            println "password = '$service.credentials.password'"
                         }
                     }
                 }
