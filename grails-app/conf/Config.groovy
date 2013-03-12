@@ -60,6 +60,9 @@ environments {
         grails.serverURL = "http://${appName}.cloudfoundry.com"
         grails.dbconsole.enabled = true
     }
+    jelastic {
+        grails.dbconsole.enabled = true
+    }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
     }
@@ -84,6 +87,15 @@ log4j = {
                     maxBackupIndex: 5
             }
             
+            jelastic {
+                rollingFile name: 'logfile',
+                    layout:pattern(conversionPattern: '%d{ISO8601} %-5p [%c{3}] - %m%n'),
+                    maxFileSize: 10*1024*1024,
+                    file:"logs/easy-wiki.log",
+                    append: true,
+                    maxBackupIndex: 5
+            }
+
             development {
                 file name: 'logfile',
                 layout:pattern(conversionPattern: '%d{ISO8601} %-5p [%c{3}] - %m%n'),
@@ -121,6 +133,8 @@ log4j = {
 // twitter-bootstrap plugin
 grails.plugins.twitterbootstrap.fixtaglib = true
 grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'
+
+file.upload.directory = 'attachments'
 
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'wiki.security.User'
