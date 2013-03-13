@@ -16,14 +16,11 @@
       </script>
       <div>
         <h3>Search in Wiki</h3>
-        <g:form controller="search" id="searchableForm" name="searchableForm" method="get">
-            <g:textField name="q" value="${params.q}" size="50" placeholder="search query"/>
-            <g:hiddenField name="suggestQuery" value="true"/>
-
-            <div class="control-group">
-                <div class="buttons">
-                    <button class="btn btn-small btn-success" type="submit"><i class="icon-search"></i> <g:message code="default.button.search.label" default="Search"/></button>
-                </div>
+        <g:form controller="search" id="searchableForm" name="searchableForm" method="get" class="form-search">
+            <div class="input-append">
+                <g:textField name="q" value="${params.q}" size="50" placeholder="search query" class="input-large search-query"/>
+                <g:hiddenField name="suggestQuery" value="true"/>
+                <button class="btn btn-success" type="submit"><i class="icon-search"></i> <g:message code="default.button.search.label" default="Search"/></button>
             </div>
         </g:form>
         <div style="clear: both; display: none;" class="hint">See <a href="http://lucene.apache.org/java/docs/queryparsersyntax.html">Lucene query syntax</a> for advanced queries</div>

@@ -11,7 +11,7 @@
 
         <h1><g:message code="default.list.label" args="[entityName]" /></h1>
         <div class="list">
-            <table>
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <g:sortableColumn property="name" title="${message(code: 'wikiPage.name.label', default: 'Name')}" />
