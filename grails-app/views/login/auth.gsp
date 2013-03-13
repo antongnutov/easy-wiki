@@ -1,11 +1,11 @@
 <html>
 <head>
-	<meta name='layout' content='clean'/>
+	<meta name='layout' content='login'/>
 	<title><g:message code="springSecurity.login.title"/></title>
 	<style type='text/css' media='screen'>
 	#login {
-		margin: 15px 0px;
-		padding: 0px;
+		margin: 15px 0;
+		padding: 0;
 		text-align: center;
 	}
 
@@ -15,7 +15,16 @@
 		margin: 60px auto;
 		text-align: left;
 		border: 1px solid #aab;
-		background-color: #f0f0fa;
+		
+		background-color: #fafafa;
+	    background-repeat: no-repeat;
+	    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
+	    background-image: -webkit-linear-gradient(white, #f2f2f2);
+	    background-image: -moz-linear-gradient(white, #f2f2f2);
+	    background-image: -o-linear-gradient(top, white, #f2f2f2);
+	    background-image: -khtml-gradient(linear, left top, left bottom, from(white), to(#f2f2f2));
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff2f2f2', GradientType=0); /* IE8 and down */
+	
 		-moz-box-shadow: 2px 2px 2px #eee;
 		-webkit-box-shadow: 2px 2px 2px #eee;
 		-khtml-box-shadow: 2px 2px 2px #eee;
@@ -24,9 +33,8 @@
 
 	#login .inner .fheader {
 		padding: 18px 26px 14px 26px;
-		background-color: #f7f7ff;
-		margin: 0px 0 14px 0;
-		color: #2e3741;
+		margin: 0 0 14px 0;
+		color: #777;
 		font-size: 18px;
 		font-weight: bold;
 	}
@@ -36,7 +44,6 @@
 		margin: 0;
 		padding: 4px 0 3px 0;
 		padding-left: 105px;
-		margin-bottom: 20px;
 		height: 1%;
 	}
 
@@ -52,6 +59,7 @@
 		width: 110px;
 		padding-top: 3px;
 		padding-right: 10px;
+	    color: #777;
 	}
 
 	#login #remember_me_holder {
@@ -66,12 +74,7 @@
 		float: none;
 		margin-left: 0;
 		text-align: left;
-		width: 200px
-	}
-
-	#login .inner .login_message {
-		padding: 6px 25px 20px 25px;
-		color: #c33;
+		width: 200px;
 	}
 
 	#login .inner .text_ {
@@ -88,10 +91,6 @@
 <div id='login'>
 	<div class='inner'>
 		<div class='fheader'><g:message code="springSecurity.login.header"/></div>
-
-		<g:if test='${flash.message}'>
-			<div class='login_message'>${flash.message}</div>
-		</g:if>
 
 		<form action='${postUrl}' method='POST' id='loginForm' class='cssform' autocomplete='off'>
 			<p>
@@ -110,7 +109,7 @@
 			</p>
 
 			<p>
-				<input type='submit' id="submit" value='${message(code: "springSecurity.login.button")}'/>
+				<input type='submit' id="submit" class="login btn btn-primary" value='${message(code: "springSecurity.login.button")}'/>
 			</p>
 		</form>
 	</div>
