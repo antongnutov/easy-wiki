@@ -59,9 +59,11 @@ environments {
     production {
         grails.serverURL = "http://${appName}.cloudfoundry.com"
         grails.dbconsole.enabled = true
+        file.upload.directory = '../attachments'
     }
     jelastic {
         grails.dbconsole.enabled = true
+        file.upload.directory = 'attachments'
     }
     development {
         grails.serverURL = "http://localhost:8080/${appName}"
@@ -133,8 +135,6 @@ log4j = {
 // twitter-bootstrap plugin
 grails.plugins.twitterbootstrap.fixtaglib = true
 grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'
-
-file.upload.directory = 'attachments'
 
 // Added by the Spring Security Core plugin:
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'wiki.security.User'
