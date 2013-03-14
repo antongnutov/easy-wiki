@@ -43,16 +43,6 @@
 
         <g:if test="${haveQuery && !haveResults && !parseException}">
           <p>Nothing matched your query - <strong>${params.q}</strong></p>
-          <g:if test="${!searchResult?.suggestedQuery}">
-            <p>Suggestions:</p>
-            <ul>
-              <li>Try a suggested query: <g:link controller="search" action="index" params="[q: params.q, suggestQuery: true]">Search again with the <strong>suggestQuery</strong> option</g:link><br />
-                <em>Note: Suggestions are only available when classes are mapped with <strong>spellCheck</strong> options, either at the class or property level.<br />
-            The simplest way to do this is add <strong>spellCheck "include"</strong> to the domain class searchable mapping closure.<br />
-                    See the plugin/Compass documentation Mapping sections for details.</em>
-              </li>
-            </ul>
-          </g:if>
         </g:if>
 
         <g:if test="${searchResult?.suggestedQuery}">
