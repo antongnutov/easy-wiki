@@ -4,6 +4,11 @@ class WikiController {
 
     static defaultAction = "wiki"
 
+    def xwikiRenderer
+    def defaultXWikiSyntaxFactory
+
+    private final def transformations = [new TableTransformation()]
+
     def wiki = {
         def pageName = params.id?.decodeURL()
 
@@ -17,10 +22,12 @@ class WikiController {
                 redirect(controller: "attachment", action: "loadContent", params: params)
             }
         }
-        
-        [page: page, name: pageName, breadcrumb: breadcrumb]
+
+        def inputSyntax = defaultXWikiSyntaxFactory.getSyntax(WikiPage.SYNTAX_MAPPING[page.syntax])
+        String content = xwikiRenderer.render(page.content, inputSyntax, transformations)
+        [page: page, name: pageName, breadcrumb: breadcrumb, content: content]
     }
-    
+
     def breadcrumb(def page) {
         def result = new StringBuffer("<b>$page.name</b>")
         def parent = page.parentPage

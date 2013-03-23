@@ -1,3 +1,4 @@
+<%@ page import="wiki.WikiPage" %>
 <html>
     <head>
         <title>Wiki</title>
@@ -8,7 +9,7 @@
             <div id="breadcrumb">${breadcrumb}</div>
 
             <div id="wikiBody">
-                <wikitext:renderHtml markup="${page.syntax}">${page.content}</wikitext:renderHtml>
+                ${content}
             </div>
 
             <div id="wikiBottom">

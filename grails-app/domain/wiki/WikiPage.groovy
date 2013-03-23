@@ -1,6 +1,7 @@
 package wiki
 
 class WikiPage {
+    public static def SYNTAX_MAPPING = [Confluence: 'confluence/1.0', creole: 'creole/1.0', MediaWiki: 'mediawiki/1.0', Xwiki: 'xwiki/2.1']
 
 	static searchable = {
         only = ['name', 'content']
@@ -12,7 +13,7 @@ class WikiPage {
     static constraints = {
         name(blank: false, maxSize: 100, unique: true)
         content(maxSize: 10000)
-        syntax(inList: ['Textile', 'MediaWiki', 'TracWiki', 'TWiki', 'Confluence'])
+        syntax(inList: ['Confluence', 'Creole', 'MediaWiki', 'Xwiki'])
         parentPage(nullable: true)
     }
     
