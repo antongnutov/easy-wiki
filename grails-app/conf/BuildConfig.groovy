@@ -35,7 +35,9 @@ grails.project.dependency.resolution = {
     plugins {
         compile ":spring-security-core:1.2.7.3"
         compile ":cloud-foundry:1.2.3"
-        compile ":xwiki-rendering:1.0-RC2"
+        compile(":xwiki-rendering:1.0-RC2") {
+            excludes 'xercesImpl'
+        }
         compile ":searchable:0.6.4"
 
         compile ":resources:1.2.RC2"
