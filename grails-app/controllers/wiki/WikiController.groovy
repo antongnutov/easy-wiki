@@ -17,15 +17,15 @@ class WikiController {
         
         if (page) {
             session.pageId = page.id
+
+            def inputSyntax = defaultXWikiSyntaxFactory.getSyntax(WikiPage.SYNTAX_MAPPING[page.syntax])
+            String content = xwikiRenderer.render(page.content, inputSyntax, transformations)
+            [page: page, name: pageName, breadcrumb: breadcrumb, content: content]
         } else {
             if (session.pageId) {
                 redirect(controller: "attachment", action: "loadContent", params: params)
             }
         }
-
-        def inputSyntax = defaultXWikiSyntaxFactory.getSyntax(WikiPage.SYNTAX_MAPPING[page.syntax])
-        String content = xwikiRenderer.render(page.content, inputSyntax, transformations)
-        [page: page, name: pageName, breadcrumb: breadcrumb, content: content]
     }
 
     def breadcrumb(def page) {
