@@ -9,6 +9,7 @@ grails.project.source.level = 1.6
 
 // xwiki plugin
 grails.xwiki.rendering.syntaxes = 'mediawiki, confluence, creole'
+grails.xwiki.rendering.macros = "comment, box, toc, footnotes, html, id, message"
 
 grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
