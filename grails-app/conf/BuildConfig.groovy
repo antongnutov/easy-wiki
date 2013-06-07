@@ -30,24 +30,24 @@ grails.project.dependency.resolution = {
     }
 
     dependencies {
-        provided 'mysql:mysql-connector-java:5.1.23'
+        provided 'mysql:mysql-connector-java:5.1.25'
     }
 
     plugins {
         compile ":spring-security-core:1.2.7.3"
         compile ":cloud-foundry:1.2.3"
-        compile(":xwiki-rendering:1.0-RC2") {
+        compile(":xwiki-rendering:1.0-RC3") {
             excludes 'xercesImpl'
         }
         compile ":searchable:0.6.4"
 
         compile ":resources:1.2.RC2"
-        compile ":twitter-bootstrap:2.3.0"
+        compile ":twitter-bootstrap:2.3.2"
         compile(":bootstrap-file-upload:2.1.1") {
             excludes 'jquery'
         }
 
-        runtime ":jquery:1.8.3"
+        runtime ":jquery:1.10.0"
         runtime ":console:1.2"
         runtime ":hibernate:$grailsVersion"
 
